@@ -8,6 +8,7 @@ public class Employee {
 	private String lastName;
 	private String department;
 	private LinkedHashMap<String, String> deptartmentOptions;
+	private String livingAddress;
 
 	public Employee() {
 		// department will be populated with the key and label on jsp page will be populated with value
@@ -45,9 +46,18 @@ public class Employee {
 		return deptartmentOptions;
 	}
 
+	public String getLivingAddress() {
+		return livingAddress;
+	}
+
+	public void setLivingAddress(String livingAddress) {
+		this.livingAddress = livingAddress;
+	}
+
 	@Override
 	public String toString() {
-		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", department=" + department + "]";
+		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", department=" + department
+				+ ", livingAddress=" + livingAddress + "]";
 	}
 
 }

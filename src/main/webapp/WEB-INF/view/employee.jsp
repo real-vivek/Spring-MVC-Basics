@@ -22,7 +22,12 @@ Select department: <form:select path="department">
 			<!--In code below getDeptartmentOptions will be called with values as labels on page  -->
 			<form:options items="${employee.deptartmentOptions}" />
 		</form:select>
-
+		<br>
+		<br>
+Where do you live?
+	<form:radiobutton path="livingAddress" label="India" />
+	<br>
+	<form:radiobutton path="livingAddress" value="Outside India" label="Outside India"/>
 		<br>
 		<br>
 		<input type="submit" value="Submit">
