@@ -47,7 +47,7 @@ public class HelloWorldController {
 		httpServletRequest.setAttribute("msg", "Msg from HttpServletRequest");
 		return "home";
 	}
-	
+
 	// Example of passing data to view using Modelmap
 	@RequestMapping("/v2/passMsg")
 	public String showFormPageAndPassMsg(ModelMap modelMap) {
