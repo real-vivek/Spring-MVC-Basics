@@ -19,6 +19,7 @@ public class EmployeeController {
 
 	@PostMapping("/processEmployee")
 	public String processEmployee(@ModelAttribute("employee") Employee employee, Model model) {
+		System.out.println(employee);
 		// Employee bean in method param is populated automatically
 		model.addAttribute("employee", employee);
 		return "employee-confirmation";

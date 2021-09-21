@@ -18,6 +18,14 @@ Employee Last Name: <form:input
 			placeholder="Enter last name of Employee" path="lastName" />
 		<br>
 		<br>
+Select department: <form:select path="department">
+			<form:option value="IT" label="IT" />
+			<form:option value="Finance" label="Finance" />
+			<form:option value="HR" label="HR" />
+		</form:select>
+
+		<br>
+		<br>
 		<input type="submit" value="Submit">
 	</form:form>
 

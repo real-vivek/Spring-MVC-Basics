@@ -4,6 +4,7 @@ public class Employee {
 
 	private String firstName;
 	private String lastName;
+	private String department;
 
 	public String getFirstName() {
 		return firstName;
@@ -21,9 +22,17 @@ public class Employee {
 		this.lastName = lastName;
 	}
 
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
 	@Override
 	public String toString() {
-		return "Employee [firstName=" + firstName + ", lastName=" + lastName + "]";
+		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", department=" + department + "]";
 	}
 
 }
