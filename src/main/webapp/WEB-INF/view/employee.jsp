@@ -19,9 +19,8 @@ Employee Last Name: <form:input
 		<br>
 		<br>
 Select department: <form:select path="department">
-			<form:option value="IT" label="IT" />
-			<form:option value="Finance" label="Finance" />
-			<form:option value="HR" label="HR" />
+			<!--In code below getDeptartmentOptions will be called with values as labels on page  -->
+			<form:options items="${employee.deptartmentOptions}" />
 		</form:select>
 
 		<br>
