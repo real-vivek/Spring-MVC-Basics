@@ -3,6 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+.error {
+	color: red;
+}
+</style>
+
 </head>
 <body>
 	<h1>Welcome to Employee Management System</h1>
@@ -16,6 +22,8 @@ Employee First Name: <form:input
 		<br>
 Employee Last Name: <form:input
 			placeholder="Enter last name of Employee" path="lastName" />
+
+		<form:errors path="lastName" cssClass="error"></form:errors>
 		<br>
 		<br>
 Select department: <form:select path="department">
@@ -26,15 +34,18 @@ Select department: <form:select path="department">
 		<br>
 Where do you live?
 	<form:radiobutton path="livingAddress" value="India" label="India" />
-	<br>
-	<form:radiobutton path="livingAddress" value="Outside India" label="Outside India"/>
-<!--We can also use form:radiobuttons path="livingAddress" items="${employee.livingAddress}" and populate LinkeHashMap in constructor like in case of drop down list instead of above 2 lines -->	
+		<br>
+		<form:radiobutton path="livingAddress" value="Outside India"
+			label="Outside India" />
+		<!--We can also use form:radiobuttons path="livingAddress" items="${employee.livingAddress}" and populate LinkeHashMap in constructor like in case of drop down list instead of above 2 lines -->
 		<br>
 		<br>
 In which states is employee comfortable to work with?
-<form:checkbox path="comfortableStates" value="MH" label="Maharashtra"/>
-<form:checkbox path="comfortableStates" value="MP" label="Madhya Pradesh"/>
-<form:checkbox path="comfortableStates" value="AP" label="Andra Pradesh"/>
+<form:checkbox path="comfortableStates" value="MH" label="Maharashtra" />
+		<form:checkbox path="comfortableStates" value="MP"
+			label="Madhya Pradesh" />
+		<form:checkbox path="comfortableStates" value="AP"
+			label="Andra Pradesh" />
 		<br>
 		<br>
 		<input type="submit" value="Submit">
