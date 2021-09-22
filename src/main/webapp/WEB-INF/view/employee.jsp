@@ -25,9 +25,16 @@ Select department: <form:select path="department">
 		<br>
 		<br>
 Where do you live?
-	<form:radiobutton path="livingAddress" label="India" />
+	<form:radiobutton path="livingAddress" value="India" label="India" />
 	<br>
 	<form:radiobutton path="livingAddress" value="Outside India" label="Outside India"/>
+<!--We can also use form:radiobuttons path="livingAddress" items="${employee.livingAddress}" and populate LinkeHashMap in constructor like in case of drop down list instead of above 2 lines -->	
+		<br>
+		<br>
+In which states is employee comfortable to work with?
+<form:checkbox path="comfortableStates" value="MH" label="Maharashtra"/>
+<form:checkbox path="comfortableStates" value="MP" label="Madhya Pradesh"/>
+<form:checkbox path="comfortableStates" value="AP" label="Andra Pradesh"/>
 		<br>
 		<br>
 		<input type="submit" value="Submit">

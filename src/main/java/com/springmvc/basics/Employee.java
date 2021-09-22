@@ -1,5 +1,6 @@
 package com.springmvc.basics;
 
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 
 public class Employee {
@@ -9,6 +10,7 @@ public class Employee {
 	private String department;
 	private LinkedHashMap<String, String> deptartmentOptions;
 	private String livingAddress;
+	private String[] comfortableStates;
 
 	public Employee() {
 		// department will be populated with the key and label on jsp page will be populated with value
@@ -53,11 +55,20 @@ public class Employee {
 	public void setLivingAddress(String livingAddress) {
 		this.livingAddress = livingAddress;
 	}
+	
+	public String[] getComfortableStates() {
+		return comfortableStates;
+	}
+
+	public void setComfortableStates(String[] comfortableStates) {
+		this.comfortableStates = comfortableStates;
+	}
 
 	@Override
 	public String toString() {
 		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", department=" + department
-				+ ", livingAddress=" + livingAddress + "]";
+				+ ", livingAddress=" + livingAddress + ", comfortableStates=" + Arrays.toString(comfortableStates)
+				+ "]";
 	}
-
+	
 }
