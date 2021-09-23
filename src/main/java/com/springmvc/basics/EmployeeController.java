@@ -33,6 +33,7 @@ public class EmployeeController {
 	@PostMapping("/processEmployee")
 	public String processEmployee(@Valid @ModelAttribute("employee") Employee employee, BindingResult bindingResult,Model model) {
 		System.out.println(employee);
+		System.out.println(bindingResult);
 		// Employee bean in method param is populated automatically
 		model.addAttribute("employee", employee);
 		if(bindingResult.hasErrors()) {

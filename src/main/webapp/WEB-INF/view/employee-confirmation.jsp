@@ -18,6 +18,7 @@
 		</c:forEach>
 	</ul>
 
-	<h2>Age of employee with ${employee.age}</h2>
+	<h2>Age of employee is: ${employee.age}</h2>
+	<h2>Email Address of employee is: ${employee.email}</h2>
 </body>
 </html>
