@@ -22,15 +22,15 @@ Employee First Name: <form:input
 		<br>
 Employee Last Name: <form:input
 			placeholder="Enter last name of Employee" path="lastName" />
-
+		<form:errors path="lastName" cssClass="error"></form:errors>
 		<br>
 		<br>
-Enter age of employee: <form:input 
-			placeholder="Enter age of employee" path="age" />
+Enter age of employee: <form:input placeholder="Enter age of employee"
+			path="age" />
 		<form:errors path="age" cssClass="error"></form:errors>
 		<br>
 		<br>
-Enter email address of employee: <form:input 
+Enter email address of employee: <form:input
 			placeholder="Enter email address" path="email" />
 		<form:errors path="email" cssClass="error"></form:errors>
 		<br>

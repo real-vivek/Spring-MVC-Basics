@@ -10,6 +10,7 @@ public class EmailConstraintValidator implements ConstraintValidator<EmailValida
 	@Override
 	public void initialize(EmailValidator emailValidator) {
 		gmailString = emailValidator.value();
+		emailValidator.message();
 	}
 
 	// We can place additional error msg in ConstraintValidatorContext

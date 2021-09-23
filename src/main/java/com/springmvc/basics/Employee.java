@@ -12,8 +12,8 @@ public class Employee {
 
 	private String firstName;
 
-	@NotNull
-	@Size(min = 1, max = 100, message = "Last Name is Required")// if message attribute is not present then default msg is: size must be between 1 and 100
+	@NotNull(message = "Last Name is Required")
+	@Size(min = 1, max = 100, message = "Min value is 1 and max is 100")// if message attribute is not present then default msg is: size must be between 1 and 100
 	private String lastName;
 	private String department;
 	private LinkedHashMap<String, String> deptartmentOptions;
@@ -23,7 +23,7 @@ public class Employee {
 	@Max(value = 60, message = "Max age must be 60")
 	private int age;
 //	@Pattern(regexp = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$", message = "Email not in valid form")
-	@EmailValidator
+	@EmailValidator(value = "@yahoo.com", message = "Only yahoo addresses are allowed")
 	private String email;
 	
 	public Employee() {
