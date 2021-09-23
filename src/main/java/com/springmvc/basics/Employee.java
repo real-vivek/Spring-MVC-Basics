@@ -6,7 +6,6 @@ import java.util.LinkedHashMap;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Employee {
@@ -23,7 +22,8 @@ public class Employee {
 	@Min(value = 18, message = "Min age must be 18")
 	@Max(value = 60, message = "Max age must be 60")
 	private int age;
-	@Pattern(regexp = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$", message = "Email not in valid form")
+//	@Pattern(regexp = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$", message = "Email not in valid form")
+	@EmailValidator
 	private String email;
 	
 	public Employee() {
