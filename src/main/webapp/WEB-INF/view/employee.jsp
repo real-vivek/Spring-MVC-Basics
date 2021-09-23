@@ -30,6 +30,11 @@ Enter age of employee: <form:input
 		<form:errors path="age" cssClass="error"></form:errors>
 		<br>
 		<br>
+Enter email address of employee: <form:input 
+			placeholder="Enter email address" path="email" />
+		<form:errors path="email" cssClass="error"></form:errors>
+		<br>
+		<br>
 Select department: <form:select path="department">
 			<!--In code below getDeptartmentOptions will be called with values as labels on page  -->
 			<form:options items="${employee.deptartmentOptions}" />

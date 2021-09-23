@@ -6,6 +6,7 @@ import java.util.LinkedHashMap;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Employee {
@@ -22,7 +23,9 @@ public class Employee {
 	@Min(value = 18, message = "Min age must be 18")
 	@Max(value = 60, message = "Max age must be 60")
 	private int age;
-
+	@Pattern(regexp = "^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$", message = "Email not in valid form")
+	private String email;
+	
 	public Employee() {
 		// department will be populated with the key and label on jsp page will be
 		// populated with value
@@ -84,11 +87,19 @@ public class Employee {
 		this.age = age;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	@Override
 	public String toString() {
 		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", department=" + department
 				+ ", livingAddress=" + livingAddress + ", comfortableStates=" + Arrays.toString(comfortableStates)
-				+ ", age=" + age + "]";
+				+ ", age=" + age + ", email=" + email + "]";
 	}
 
 }
