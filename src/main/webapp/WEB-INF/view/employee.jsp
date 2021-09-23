@@ -23,7 +23,11 @@ Employee First Name: <form:input
 Employee Last Name: <form:input
 			placeholder="Enter last name of Employee" path="lastName" />
 
-		<form:errors path="lastName" cssClass="error"></form:errors>
+		<br>
+		<br>
+Enter age of employee: <form:input 
+			placeholder="Enter age of employee" path="age" />
+		<form:errors path="age" cssClass="error"></form:errors>
 		<br>
 		<br>
 Select department: <form:select path="department">

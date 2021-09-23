@@ -18,5 +18,6 @@
 		</c:forEach>
 	</ul>
 
+	<h2>Age of employee with ${employee.age}</h2>
 </body>
 </html>

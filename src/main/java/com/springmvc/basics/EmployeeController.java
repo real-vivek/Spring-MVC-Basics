@@ -1,7 +1,6 @@
 package com.springmvc.basics;
 
 import javax.validation.Valid;
-
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +16,7 @@ public class EmployeeController {
 
 	@InitBinder
 	public void initBInder(WebDataBinder webDataBinder) {
-		// StringTrimmerEditor will trim leading and trailing whitespaces
+		// StringTrimmerEditor will trim leading and trailing white spaces
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);// true value means trim to null
 		webDataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
 	}

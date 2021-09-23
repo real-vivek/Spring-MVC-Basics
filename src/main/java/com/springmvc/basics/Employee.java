@@ -3,6 +3,8 @@ package com.springmvc.basics;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -17,6 +19,9 @@ public class Employee {
 	private LinkedHashMap<String, String> deptartmentOptions;
 	private String livingAddress;
 	private String[] comfortableStates;
+	@Min(value = 18, message = "Min age must be 18")
+	@Max(value = 60, message = "Max age must be 60")
+	private int age;
 
 	public Employee() {
 		// department will be populated with the key and label on jsp page will be
@@ -71,11 +76,19 @@ public class Employee {
 		this.comfortableStates = comfortableStates;
 	}
 
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
 	@Override
 	public String toString() {
 		return "Employee [firstName=" + firstName + ", lastName=" + lastName + ", department=" + department
 				+ ", livingAddress=" + livingAddress + ", comfortableStates=" + Arrays.toString(comfortableStates)
-				+ "]";
+				+ ", age=" + age + "]";
 	}
 
 }
